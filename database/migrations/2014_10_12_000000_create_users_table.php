@@ -16,7 +16,11 @@ return new class extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password');
+<<<<<<< HEAD
             $table->enum('role', ['admin', 'kasir', 'manajer']);
+=======
+            $table->enum('role', ['admin', 'kasir', 'manajer','member']);
+>>>>>>> e5d46b5 (Menambahkan project baru)
             $table->timestamps();
         });
     }

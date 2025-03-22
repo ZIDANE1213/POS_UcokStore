@@ -30,12 +30,7 @@
             },
         });
     </script>
-<<<<<<< HEAD
 
-=======
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>     
->>>>>>> e5d46b5 (Menambahkan project baru)
     <!-- CSS Files -->
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/css/plugins.min.css') }}" />
@@ -47,84 +42,42 @@
 
 <body>
     <div class="wrapper">
-        <!-- Sidebar -->
-        <div class="sidebar" data-background-color="dark">
-            <div class="sidebar-logo">
-                <!-- Logo Header -->
-                <div class="logo-header" data-background-color="dark">
-                    <a href="#" class="logo">
-                        <a href="#" class="navbar-brand text-white">UcokStore</a>
-                    </a>
-                    <div class="nav-toggle">
-                        <button class="btn btn-toggle toggle-sidebar">
-                            <i class="gg-menu-right"></i>
-                        </button>
-                        <button class="btn btn-toggle sidenav-toggler">
-                            <i class="gg-menu-left"></i>
-                        </button>
-                    </div>
-                    <button class="topbar-toggler more">
-                        <i class="gg-more-vertical-alt"></i>
-                    </button>
-                </div>
-                <!-- End Logo Header -->
+       <!-- Sidebar -->
+<div class="sidebar" data-background-color="dark">
+    <div class="sidebar-logo">
+        <!-- Logo Header -->
+        <div class="logo-header" data-background-color="dark">
+            <a href="#" class="logo">
+                <a href="#" class="navbar-brand text-white">UcokStore</a>
+            </a>
+            <div class="nav-toggle">
+                <button class="btn btn-toggle toggle-sidebar">
+                    <i class="gg-menu-right"></i>
+                </button>
+                <button class="btn btn-toggle sidenav-toggler">
+                    <i class="gg-menu-left"></i>
+                </button>
             </div>
-            <div class="sidebar-wrapper scrollbar scrollbar-inner">
-<<<<<<< HEAD
-                <div class="sidebar-content">
-                    <ul class="nav nav-secondary">
-                        <li class="nav-item">
-=======
-                <div class="sidebar-content"> 
-                    <ul class="nav nav-secondary">
-                        <li class="nav-item">
-                            <a href="{{ route('dashboard.admin') }}">
-                                <i class="fas fa-tachometer-alt"></i>
-                                <p>Dashboard</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
->>>>>>> e5d46b5 (Menambahkan project baru)
-                            <a href="{{ route('kategori.index') }}">
-                                <i class="fas fa-desktop"></i>
-                                <p>Kategori</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ route('barang.index') }}">
-                                <i class="fas fa-desktop"></i>
-                                <p>Barang</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ route('pembelian.index') }}">
-                                <i class="fas fa-desktop"></i>
-                                <p>Pembelian Barang</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ route('penjualan.index') }}">
-                                <i class="fas fa-desktop"></i>
-                                <p>Penjualan Barang</p>
-                            </a>
-                        </li>
-<<<<<<< HEAD
-                    </ul>
-                </div>
-            </div>
-=======
-                        <li class="nav-item">
-                            <a href="{{ route('pengajuan.index') }}">
-                                <i class="fas fa-desktop"></i>
-                                <p>Pengajuan</p>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            
->>>>>>> e5d46b5 (Menambahkan project baru)
+            <button class="topbar-toggler more">
+                <i class="gg-more-vertical-alt"></i>
+            </button>
         </div>
+        <!-- End Logo Header -->
+    </div>
+    <div class="sidebar-wrapper scrollbar scrollbar-inner">
+        <div class="sidebar-content">
+            <ul class="nav nav-secondary">
+                <li class="nav-item">
+                    <a href="{{ route('pengajuan.index') }}">
+                        <i class="fas fa-desktop"></i>
+                        <p>Pengajuan</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
         <!-- End Sidebar -->
 
         <div class="main-panel">
