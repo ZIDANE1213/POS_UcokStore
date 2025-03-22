@@ -41,8 +41,4 @@ class Penjualan extends Model
     {
         return $this->hasMany(DetailPenjualan::class);
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> e5d46b5 (Menambahkan project baru)
