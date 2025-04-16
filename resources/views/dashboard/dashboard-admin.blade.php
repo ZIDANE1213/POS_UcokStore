@@ -25,8 +25,6 @@
                 </li>
             </ul>
         </div>
-<<<<<<< HEAD
-=======
 
         <!-- Tambahan Grafik -->
         <div class="row">
@@ -43,7 +41,6 @@
         </div>
 
         <!-- Tabel Data -->
->>>>>>> e5d46b5 (Menambahkan project baru)
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
@@ -113,73 +110,15 @@
                     </div>
                 </div>
             </div>
-<<<<<<< HEAD
-
         </div>
     </div>
 </div>
 @endsection
-=======
-        </div>
-    </div>
-</div>
 
+@section('scripts')
 <!-- Tambahkan Chart.js dan AJAX -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-<script>
-    let ctx = document.getElementById('transactionChart').getContext('2d');
-    let chart = new Chart(ctx, {
-        type: 'line',
-        data: {
-            labels: [],
-            datasets: [
-                {
-                    label: 'Jumlah Transaksi',
-                    borderColor: 'blue',
-                    backgroundColor: 'rgba(0, 0, 255, 0.2)',
-                    data: [],
-                    fill: true
-                },
-                {
-                    label: 'Total Pendapatan',
-                    borderColor: 'green',
-                    backgroundColor: 'rgba(0, 255, 0, 0.2)',
-                    data: [],
-                    fill: true
-                }
-            ]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            scales: {
-                x: { title: { display: true, text: 'Tanggal' } },
-                y: { title: { display: true, text: 'Jumlah' } }
-            }
-        }
-    });
-
-    function fetchData() {
-        $.ajax({
-            url: '/api/penjualan',
-            method: 'GET',
-            success: function (data) {
-                chart.data.labels = data.map(t => t.date);
-                chart.data.datasets[0].data = data.map(t => t.count);
-                chart.data.datasets[1].data = data.map(t => t.revenue);
-                chart.update();
-            }
-        });
-    }
-
-    // Ambil data pertama kali
-    fetchData();
-
-    // Update data setiap 5 detik
-    setInterval(fetchData, 5000);
-</script>
 
 <script>
     let ctx = document.getElementById('transactionChart').getContext('2d');
@@ -255,6 +194,4 @@
     // Update data setiap 5 detik
     setInterval(fetchData, 5000);
 </script>
-
 @endsection
->>>>>>> e5d46b5 (Menambahkan project baru)

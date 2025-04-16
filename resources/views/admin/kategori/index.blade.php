@@ -9,7 +9,10 @@
             @if (session('success'))
                 <div class="alert alert-success">{{ session('success') }}</div>
             @endif
-
+            <a href="{{ route('laporan.pembelian.pdf') }}" class="btn btn-danger mb-3" target="_blank">
+                Download PDF
+            </a>
+            
             <table class="table table-bordered">
                 <thead>
                     <tr>

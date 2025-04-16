@@ -40,7 +40,10 @@ class BarangController extends Controller
         ]);
 
         // Generate kode barang otomatis berdasarkan jumlah barang yang ada
-        $newCode = 'BRG' . str_pad(Barang::count() + 1, 4, '0', STR_PAD_LEFT);
+        $lastBarang = Barang::orderBy('id', 'desc')->first();
+$lastNumber = $lastBarang ? ((int)substr($lastBarang->kode_barang, 3)) : 0;
+$newCode = 'BRG' . str_pad($lastNumber + 1, 4, '0', STR_PAD_LEFT);
+
 
         // Upload gambar jika ada
         $gambarPath = $request->hasFile('gambar') ? $request->file('gambar')->store('barang', 'public') : null;

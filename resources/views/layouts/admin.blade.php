@@ -30,12 +30,7 @@
             },
         });
     </script>
-<<<<<<< HEAD
 
-=======
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>     
->>>>>>> e5d46b5 (Menambahkan project baru)
     <!-- CSS Files -->
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/css/plugins.min.css') }}" />
@@ -70,61 +65,73 @@
                 <!-- End Logo Header -->
             </div>
             <div class="sidebar-wrapper scrollbar scrollbar-inner">
-<<<<<<< HEAD
                 <div class="sidebar-content">
                     <ul class="nav nav-secondary">
                         <li class="nav-item">
-=======
-                <div class="sidebar-content"> 
-                    <ul class="nav nav-secondary">
-                        <li class="nav-item">
-                            <a href="{{ route('dashboard.admin') }}">
-                                <i class="fas fa-tachometer-alt"></i>
-                                <p>Dashboard</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
->>>>>>> e5d46b5 (Menambahkan project baru)
-                            <a href="{{ route('kategori.index') }}">
-                                <i class="fas fa-desktop"></i>
-                                <p>Kategori</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ route('barang.index') }}">
-                                <i class="fas fa-desktop"></i>
-                                <p>Barang</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ route('pembelian.index') }}">
-                                <i class="fas fa-desktop"></i>
-                                <p>Pembelian Barang</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ route('penjualan.index') }}">
-                                <i class="fas fa-desktop"></i>
-                                <p>Penjualan Barang</p>
-                            </a>
-                        </li>
-<<<<<<< HEAD
-                    </ul>
+
+                            <div class="sidebar-content">
+                                <ul class="nav nav-secondary">
+                                    <li class="nav-item">
+                                        <a href="{{ route('dashboard.admin') }}">
+                                            <i class="fas fa-tachometer-alt"></i>
+                                            <p>Dashboard</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+
+                                        <a href="{{ route('kategori.index') }}">
+                                            <i class="fas fa-desktop"></i>
+                                            <p>Kategori</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="{{ route('barang.index') }}">
+                                            <i class="fas fa-desktop"></i>
+                                            <p>Barang</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="{{ route('pembelian.index') }}">
+                                            <i class="fas fa-desktop"></i>
+                                            <p>Pembelian Barang</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="{{ route('penjualan.index') }}">
+                                            <i class="fas fa-desktop"></i>
+                                            <p>Penjualan Barang</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="{{ route('pengajuan.index') }}">
+                                            <i class="fas fa-desktop"></i>
+                                            <p>Pengajuan</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="{{ route('laporan.index') }}">
+                                            <i class="fas fa-desktop"></i>
+                                            <p>Laporan Penjualan</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="{{ route('laporan_Pembelian.index') }}">
+                                            <i class="fas fa-desktop"></i>
+                                            <p>Laporan Pembelian</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="{{ route('absen.index') }}">
+                                            <i class="fas fa-desktop"></i>
+                                            <p>Absen</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                 </div>
             </div>
-=======
-                        <li class="nav-item">
-                            <a href="{{ route('pengajuan.index') }}">
-                                <i class="fas fa-desktop"></i>
-                                <p>Pengajuan</p>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            
->>>>>>> e5d46b5 (Menambahkan project baru)
         </div>
+
         <!-- End Sidebar -->
 
         <div class="main-panel">
@@ -207,8 +214,8 @@
                 <div class="container-fluid d-flex justify-content-center">
 
                     <div class="copyright">
-                        2024, made with <i class="fa fa-heart heart text-danger"></i> by
-                        <a href="http://www.themekita.com">ThemeKita</a>
+                         <i class="fa fa-heart heart text-danger"></i> 
+                        <a href="http://www.themekita.com"></a>
                     </div>
 
                 </div>
@@ -310,6 +317,7 @@
 
     <!-- Kaiadmin JS -->
     <script src="{{ asset('assets/js/kaiadmin.min.js') }}"></script>
+    @stack('scripts')
 
 
     <script src="{{ asset('assets/js/setting-demo.js') }}"></script>
@@ -345,3 +353,4 @@
 </body>
 
 </html>
+8996001600269

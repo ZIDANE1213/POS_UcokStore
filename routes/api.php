@@ -2,13 +2,11 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-<<<<<<< HEAD
-=======
+
 use App\Models\Penjualan;
 use App\Models\Pembelian;
 use Illuminate\Support\Facades\DB;
 
->>>>>>> e5d46b5 (Menambahkan project baru)
 
 /*
 |--------------------------------------------------------------------------
@@ -21,8 +19,7 @@ use Illuminate\Support\Facades\DB;
 |
 */
 
-<<<<<<< HEAD
-=======
+
 
 Route::get('/grafik-transaksi', function () {
     // Ambil data penjualan per tanggal
@@ -51,7 +48,6 @@ Route::get('/grafik-transaksi', function () {
     ]);
 });
 
->>>>>>> e5d46b5 (Menambahkan project baru)
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });

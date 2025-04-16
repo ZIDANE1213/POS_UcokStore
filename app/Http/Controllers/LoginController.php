@@ -44,11 +44,10 @@ class LoginController extends Controller
             return redirect('/dashboard-kasir');
         } elseif ($user->role === 'manajer') {
             return redirect('/dashboard-manajer');
-<<<<<<< HEAD
-=======
+
+
         }elseif ($user->role === 'member') {
             return redirect('/dashboard-member');
->>>>>>> e5d46b5 (Menambahkan project baru)
         }
 
         return redirect('/home');

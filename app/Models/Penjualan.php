@@ -41,4 +41,6 @@ class Penjualan extends Model
     {
         return $this->hasMany(DetailPenjualan::class);
     }
+
+    
 }
