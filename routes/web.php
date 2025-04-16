@@ -113,13 +113,24 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
     Route::get('/laporan/penjualan/pdf', [LaporanController::class, 'exportPdf'])->name('laporan.Penjualan.pdf');
     Route::resource('penjualan', PenjualanController::class);
 
-       // absensi
-       Route::get('/absen', [AbsenKerjaController::class, 'index'])->name('absen.index');
-       Route::post('/absen/store', [AbsenKerjaController::class, 'store'])->name('absen.store');
-       Route::post('/absen/update', [AbsenKerjaController::class, 'update'])->name('absen.update');
-       Route::post('/absen/delete', [AbsenKerjaController::class, 'delete'])->name('absen.delete');
-       Route::post('/absen/ubah-status', [AbsenKerjaController::class, 'ubahStatus'])->name('absen.ubahStatus');
-       Route::post('/absen/selesai-kerja', [AbsenKerjaController::class, 'selesaiKerja'])->name('absen.selesaiKerja');
+    // absensi
+    Route::prefix('absen')->name('absen.')->group(function () {
+        Route::get('/', [AbsenKerjaController::class, 'index'])->name('index');
+        Route::post('/store', [AbsenKerjaController::class, 'store'])->name('store');
+        Route::post('/update', [AbsenKerjaController::class, 'update'])->name('update');
+        Route::post('/delete', [AbsenKerjaController::class, 'delete'])->name('delete');
+        Route::post('/ubah-status', [AbsenKerjaController::class, 'ubahStatus'])->name('ubahStatus');
+        Route::post('/selesai-kerja', [AbsenKerjaController::class, 'selesaiKerja'])->name('selesaiKerja');
+        Route::get('/api/absen/{id}', [AbsenKerjaController::class, 'get']);
+
+
+        // Route export
+        Route::get('/export-excel', [AbsenKerjaController::class, 'exportExcel'])->name('exportExcel');
+        Route::get('/export-pdf', [AbsenKerjaController::class, 'exportPdf'])->name('exportPdf');
+
+        // Route import
+        Route::post('/import', [AbsenKerjaController::class, 'importExcel'])->name('import');
+    });
        
 
 }); // ← Tambahkan ini untuk menutup middleware(['auth', 'role:admin'])

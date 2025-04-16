@@ -11,15 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('tbl_absen_kerja', function (Blueprint $table) {
+        Schema::create('absen_kerjas', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id');
+            $table->foreignId('user_id')->constrained();
+            $table->date('tanggal_masuk')->nullable();
             $table->enum('status_masuk', ['masuk', 'sakit', 'cuti'])->default('masuk');
             $table->time('waktu_mulai_kerja')->nullable();
             $table->time('waktu_akhir_kerja')->nullable();
             $table->timestamps();
-        
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
         
     }

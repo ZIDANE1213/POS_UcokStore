@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('absen', function (Blueprint $table) {
+        Schema::create('absens', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
             // Kolom-kolom lainnya yang dibutuhkan
